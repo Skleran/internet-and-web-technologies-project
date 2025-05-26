@@ -10,7 +10,7 @@
 
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
 }
 
 .innerContainer {
@@ -37,7 +37,17 @@ h1 {
   line-height: 1.15;
 }
 
-p {
+a {
   margin-top: 1rem;
+  text-decoration: none;
+}
+
+p {
   color: #a1a1aa;
+}
+
+p:hover {
+  color: #e2e2e2;
+  transition: all;
+  transition-duration: 300ms;
 }
