@@ -37,17 +37,31 @@ h1 {
   line-height: 1.15;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
 a {
   margin-top: 1rem;
   text-decoration: none;
 }
 
+.wip {
+  color: #a1a1aa;
+  text-decoration: none;
+  transition: color 300ms ease;
+}
+
+.wip:hover {
+  color: #e2e2e2;
+}
+
 p {
   color: #a1a1aa;
+  text-decoration: none;
+  transition: color 300ms ease;
 }
 
 p:hover {
   color: #e2e2e2;
-  transition: all;
-  transition-duration: 300ms;
 }
