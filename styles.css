@@ -132,15 +132,43 @@ p:hover {
 .curved-gradient {
   position: fixed;
   top: 20%;
-  left: -5%;
+  left: -10%;
   width: 160%;
-  height: 50%;
+  height: 5%;
   background: linear-gradient(120deg, #4f46e5 0%, #7c3aed 50%, #2563eb 100%);
+  background-size: 200% 200%;
   clip-path: ellipse(50% 40% at 50% 10%);
   filter: blur(50px);
-  opacity: 0.7;
-  transform: rotate(-150deg) skewY(-5deg);
+  opacity: 0;
+  transform: rotate(-150deg) skewY(-5deg) translateX(-100px);
   z-index: 0;
+
+  /* Animations */
+  animation: revealGradient 2s ease-out forwards,
+    animateGradient 8s ease-in-out infinite;
+}
+
+@keyframes revealGradient {
+  0% {
+    opacity: 0;
+    transform: rotate(-150deg) skewY(-5deg) translateX(-100px);
+    filter: blur(80px) brightness(0.3);
+  }
+  100% {
+    opacity: 0.7;
+    transform: rotate(-150deg) skewY(-5deg) translateX(0);
+    filter: blur(50px) brightness(1);
+  }
+}
+
+@keyframes animateGradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @media (min-width: 768px) {
