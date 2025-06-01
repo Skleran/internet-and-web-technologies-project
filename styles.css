@@ -359,7 +359,7 @@ p:hover {
   /* Add smooth transitions for grid properties */
   transition: grid-template-columns 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  background: white;
+  /* background: white; */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -431,12 +431,13 @@ p:hover {
 }
 
 .grid-cell {
-  border: 2px solid #e2e2e2;
+  border: 2px solid #5e5e5e;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  color: #666;
+  color: #e2e2e2;
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
@@ -447,19 +448,18 @@ p:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Default 2x2 layout */
 .grid-cell:nth-child(1) {
-  background-color: #ffebee;
+  background-color: #6e0716;
 }
 
 .grid-cell:nth-child(2) {
-  background-color: #e8f5e8;
+  background-color: #064706;
 }
 
 .grid-cell:nth-child(3) {
-  background-color: #e3f2fd;
+  background-color: #035a99;
 }
 
 .grid-cell:nth-child(4) {
-  background-color: #fff3e0;
+  background-color: #9b0882;
 }
