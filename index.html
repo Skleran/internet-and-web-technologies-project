@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="landing">
       <div class="gradient-wrapper">
         <div class="curved-gradient"></div>
       </div>
       <div class="innerContainer">
         <div class="navbar">
-          <div><h2>EK</h2></div>
+          <div>
+            <a href="#landing"><h2>EK</h2></a>
+          </div>
           <div class="navbar-list">
-            <a href=""><p>Home</p></a>
-            <a href=""><p>Projects</p></a>
-            <a href=""><p>About me</p></a>
-            <a href=""><p>Contact</p></a>
+            <a href="#about-me"><p>About</p></a>
+            <a href="#toolkit"><p>Toolkit</p></a>
+            <a href="#projects"><p>Projects</p></a>
+            <a href="#contact"><p>Contact</p></a>
           </div>
 
           <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
@@ -31,10 +33,10 @@
         </div>
         <div class="mobile-menu" id="mobileMenu">
           <div class="mobile-menu-content">
-            <a href="#" onclick="toggleMobileMenu()">Home</a>
-            <a href="#" onclick="toggleMobileMenu()">Projects</a>
-            <a href="#" onclick="toggleMobileMenu()">About me</a>
-            <a href="#" onclick="toggleMobileMenu()">Contact</a>
+            <a href="#about-me" onclick="toggleMobileMenu()">About</a>
+            <a href="#toolkit" onclick="toggleMobileMenu()">Toolkit</a>
+            <a href="#projects" onclick="toggleMobileMenu()">Projects</a>
+            <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
           </div>
         </div>
         <div class="side-info">
@@ -47,21 +49,21 @@
         </h1>
       </div>
     </div>
-    <div class="about-me-section">
+    <div class="about-me-section" id="about-me">
       <div class="about-me-image">
         <img src="./assets/images/image.png" alt="" />
       </div>
       <div class="about-me-text">
-        <h1>I, Erdem</h1>
+        <h1>About</h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt tempore
-          ad, at fugit corporis odio, necessitatibus deserunt eligendi totam
-          expedita vel debitis distinctio! Officiis sed eos cumque odit officia
-          itaque?
+          I’m a software engineering student who thrives in the fast-moving
+          world of web development. I love diving into the latest tools and
+          trends, always aiming to build projects that are not just functional,
+          but intuitive and user-friendly.
         </p>
       </div>
     </div>
-    <div class="">
+    <div class="" id="toolkit">
       <div class="grid-section-wrapper">
         <h1 class="grid-header">What do I bring to table</h1>
         <div class="grid layout-default" id="grid">
@@ -69,9 +71,8 @@
             <div class="grid-inner-cell">
               <h3>Design</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita hic quam enim obcaecati et quae in tempora ut, quod
-                deleniti.
+                I love crafting bold, modern designs that not only look great
+                but also guide users intuitively through the interface.
               </p>
             </div>
           </div>
@@ -79,9 +80,9 @@
             <div class="grid-inner-cell">
               <h3>Develop</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita hic quam enim obcaecati et quae in tempora ut, quod
-                deleniti.
+                Building clean, responsive, and accessible frontends is where I
+                thrive — I see code as a tool to bring thoughtful experiences to
+                life.
               </p>
             </div>
           </div>
@@ -89,32 +90,32 @@
             <div class="grid-inner-cell">
               <h3>User Experience</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita hic quam enim obcaecati et quae in tempora ut, quod
-                deleniti.
+                I’m passionate about designing interactions that feel natural
+                and effortless, always keeping the user’s journey at the heart
+                of my decisions.
               </p>
             </div>
           </div>
           <div class="grid-cell" data-layout="layout-4">
             <div class="grid-inner-cell">
-              <h3>Testing</h3>
+              <h3>Test</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita hic quam enim obcaecati et quae in tempora ut, quod
-                deleniti.
+                Testing is my way of ensuring everything works as smoothly as it
+                looks — I enjoy polishing every detail until the experience
+                feels just right.
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="projects-section">
+    <div class="projects-section" id="projects">
       <h1 class="section-header">My Projects</h1>
       <div class="project-div">
         <h2 class="project-name">The Florist</h2>
         <p class="project-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-          doloremque saepe corrupti temporibus est maxime?
+          In my Florist project, I focused on creating a responsive design that
+          works seamlessly across different screen sizes and devices.
         </p>
         <div class="project-images">
           <img src="./assets/images/florist-1.png" alt="" />
@@ -128,8 +129,10 @@
       <div class="project-div">
         <h2 class="project-name">Quantum Club Website</h2>
         <p class="project-description">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
-          earum incidunt illum veniam iusto delectus?
+          I built this project for a newly established club at our university.
+          It features smooth animations, playful transitions, and thoughtful
+          color experiments — all designed to shine in both dark and light
+          modes.
         </p>
         <div class="project-images">
           <img src="./assets/images/quantum-1.png" alt="" />
@@ -140,7 +143,7 @@
         </div>
       </div>
     </div>
-    <div class="contact-section">
+    <div class="contact-section" id="contact">
       <div class="contact-inner-section">
         <h1>Contact</h1>
         <div class="contact-nav">
