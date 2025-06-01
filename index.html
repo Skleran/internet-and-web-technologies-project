@@ -5,36 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Erdem Koyuncu's Website</title>
     <link rel="stylesheet" href="styles.css" />
-    <script>
-      function toggleMobileMenu() {
-        const mobileMenu = document.getElementById("mobileMenu");
-        const hamburger = document.getElementById("hamburger");
-
-        mobileMenu.classList.toggle("active");
-        hamburger.classList.toggle("active");
-
-        if (mobileMenu.classList.contains("active")) {
-          document.body.style.overflow = "hidden";
-        } else {
-          document.body.style.overflow = "auto";
-        }
-      }
-
-      document
-        .getElementById("mobileMenu")
-        .addEventListener("click", function (e) {
-          if (
-            e.target === this ||
-            e.target.classList.contains("mobile-menu-close")
-          ) {
-            toggleMobileMenu();
-          }
-
-          if (!e.target.closest(".mobile-menu-content a")) {
-            toggleMobileMenu();
-          }
-        });
-    </script>
   </head>
   <body>
     <div class="container">
@@ -77,6 +47,16 @@
         </h1>
       </div>
     </div>
-    <div class="container"></div>
+    <div class="">
+      <div class="grid-section-wrapper">
+        <div class="grid layout-default" id="grid">
+          <div class="grid-cell cell-1" data-layout="layout-1"></div>
+          <div class="grid-cell cell-2" data-layout="layout-2">Section 2</div>
+          <div class="grid-cell cell-3" data-layout="layout-3">Section 3</div>
+          <div class="grid-cell cell-4" data-layout="layout-4">Section 4</div>
+        </div>
+      </div>
+    </div>
   </body>
+  <script src="./main.js"></script>
 </html>
