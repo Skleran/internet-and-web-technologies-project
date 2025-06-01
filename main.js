@@ -54,3 +54,24 @@ cells.forEach((cell) => {
     }
   });
 });
+
+async function copyEmail() {
+  const box = document.querySelector(".contact-nav");
+  const icon = document.querySelector(".copyIcon");
+
+  try {
+    await navigator.clipboard.writeText("erdemkoyuncu3380@outlook.com");
+    icon.innerHTML = `<polyline points="20,6 9,17 4,12"></polyline>`;
+
+    box.classList.add("copied");
+
+    setTimeout(() => {
+      icon.innerHTML = `
+            <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+                    `;
+
+      box.classList.remove("copied");
+    }, 2000);
+  } catch {}
+}
