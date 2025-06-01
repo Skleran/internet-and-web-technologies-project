@@ -432,15 +432,77 @@ p:hover {
 
 .grid-cell {
   border: 2px solid #5e5e5e;
-  border-radius: 12px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 12px;
   font-weight: bold;
   color: #e2e2e2;
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
+
+  padding: 1rem;
+  position: relative;
+}
+
+.grid-inner-cell {
+  background-color: transparent;
+  padding: 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, 50%);
+  text-align: center;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.grid-inner-cell-active {
+  gap: 0.5rem;
+  left: 0%;
+  bottom: 0%;
+  transform: translate(0, 0);
+  text-align: start;
+}
+
+.grid-inner-cell > h3 {
+  font-weight: bolder;
+  font-size: large;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .grid-inner-cell > h3 {
+    font-size: x-large;
+  }
+}
+
+.grid-inner-cell-active > h3 {
+  /* font-size: xx-large; */
+}
+
+.grid-inner-cell > p {
+  background-color: transparent;
+  font-weight: 600;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  color: transparent;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.grid-inner-cell-active > p {
+  height: 7rem;
+  width: auto;
+  color: inherit;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .grid-inner-cell-active > p {
+    height: 4rem;
+  }
 }
 
 .grid-cell:hover {

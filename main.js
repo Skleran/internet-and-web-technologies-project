@@ -28,13 +28,32 @@ const cells = document.querySelectorAll("[data-layout]");
 cells.forEach((cell) => {
   cell.addEventListener("click", () => {
     const targetLayout = cell.dataset.layout;
+    const innerCell = cell.querySelector(".grid-inner-cell");
 
     if (grid.classList.contains(targetLayout)) {
+      // Remove layout and all active classes
       grid.classList.remove(targetLayout);
+      cells.forEach((c) => {
+        c.classList.remove("grid-cell-active");
+        // Remove active class from inner cells too
+        const innerC = c.querySelector(".grid-inner-cell");
+        if (innerC) innerC.classList.remove("grid-inner-cell-active");
+      });
     } else {
+      // Clear all layouts and active classes
       grid.classList.remove("layout-1", "layout-2", "layout-3", "layout-4");
+      cells.forEach((c) => {
+        c.classList.remove("grid-cell-active");
+        // Remove active class from all inner cells
+        const innerC = c.querySelector(".grid-inner-cell");
+        if (innerC) innerC.classList.remove("grid-inner-cell-active");
+      });
 
+      // Add new layout and active classes
       grid.classList.add(targetLayout);
+      cell.classList.add("grid-cell-active");
+      // Add active class to the clicked cell's inner cell
+      if (innerCell) innerCell.classList.add("grid-inner-cell-active");
     }
   });
 });
