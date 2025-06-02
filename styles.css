@@ -909,6 +909,7 @@ p:hover {
 @media (min-width: 768px) {
   .contact-nav {
     margin-bottom: 0;
+    padding-bottom: 0.5rem;
   }
 }
 
