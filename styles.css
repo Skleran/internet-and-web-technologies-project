@@ -123,16 +123,6 @@ a {
   text-decoration: none;
 }
 
-.wip {
-  color: #a1a1aa;
-  text-decoration: none;
-  transition: color 300ms ease;
-}
-
-.wip:hover {
-  color: #e2e2e2;
-}
-
 p {
   color: #a1a1aa;
   text-decoration: none;
@@ -207,6 +197,52 @@ p:hover {
     left: -5%;
     width: 120%;
     height: 60%;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.scroll-down-wrapper {
+  position: absolute;
+  overflow: visible;
+  background-color: transparent;
+  opacity: 0;
+  bottom: 2rem;
+  right: 0rem;
+  animation: reveal 2s ease-in-out 3.5s forwards;
+}
+
+.scroll-down-wrapper > svg {
+  scale: 0.5;
+  animation: bounce 2s infinite 3.25s;
+}
+
+@media (min-width: 768px) {
+  .scroll-down-wrapper {
+    left: 50%;
+    transform: translate(-50%);
+    width: fit-content;
+  }
+
+  .scroll-down-wrapper > svg {
+    scale: 0.7;
   }
 }
 
@@ -437,6 +473,29 @@ p:hover {
 .grid-header {
   text-align: center;
   padding: 0 1rem;
+}
+
+.grid-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.grid-info > svg {
+  stroke: #a1a1aa;
+}
+
+.grid-info > p {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .grid-info > p {
+    font-size: 1rem;
+  }
 }
 
 .grid {
@@ -844,6 +903,7 @@ p:hover {
   gap: 1rem;
   transition: background-color 0.2s;
   padding: 0.5rem;
+  padding-bottom: 1rem;
   border-radius: 12px;
 }
 @media (min-width: 768px) {
