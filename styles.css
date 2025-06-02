@@ -903,13 +903,12 @@ p:hover {
   gap: 1rem;
   transition: background-color 0.2s;
   padding: 0.5rem;
-  padding-bottom: 1rem;
   border-radius: 12px;
 }
+
 @media (min-width: 768px) {
   .contact-nav {
     margin-bottom: 0;
-    padding-bottom: 0.5rem;
   }
 }
 
