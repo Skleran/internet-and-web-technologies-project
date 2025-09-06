@@ -940,3 +940,26 @@ p:hover {
   color: #09090b;
   text-align: end;
 }
+
+.project-top {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0rem;
+}
+
+.project-top > span:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .project-top {
+    flex-direction: row;
+    align-items: end;
+    overflow: hidden;
+  }
+
+  .project-top > span {
+    padding-left: 2rem;
+    font-size: xx-large;
+  }
+}
