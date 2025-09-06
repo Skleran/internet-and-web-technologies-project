@@ -60,7 +60,7 @@ async function copyEmail() {
   const icon = document.querySelector(".copyIcon");
 
   try {
-    await navigator.clipboard.writeText("erdemkoyuncu3380@outlook.com");
+    await navigator.clipboard.writeText("iletisim@erdemkoyuncu.com");
     icon.innerHTML = `<polyline points="20,6 9,17 4,12"></polyline>`;
 
     box.classList.add("copied");
